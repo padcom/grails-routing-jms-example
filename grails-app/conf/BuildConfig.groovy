@@ -25,10 +25,10 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        runtime ':routing:1.1.1'
-        runtime ':routing-jms:1.1.1'
-        runtime ':hibernate:1.3.7'
-        runtime ':tomcat:1.3.7'
+//        runtime ':routing:1.1.4-SNAPSHOT'
+//        runtime ':routing-jms:1.1.4-SNAPSHOT'
+        runtime ':hibernate:2.0.0.RC3'
+        runtime ':tomcat:2.0.0.RC3'
     }
 
     dependencies {
@@ -37,3 +37,15 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.13'
     }
 }
+
+def setupPluginLocation(String plugin) {
+	[ "../../grails-${plugin}/workspace", "../grails-${plugin}"	].each { location ->
+		if (new File(location).exists()) {
+			println "Using ${location} for ${plugin} plugin source"
+			grails.plugin.location."${plugin}" = location
+		}
+	}
+}
+
+setupPluginLocation('routing')
+setupPluginLocation('routing-jms')
