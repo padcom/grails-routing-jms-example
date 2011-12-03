@@ -2,3 +2,7 @@ target
 activemq-data
 stacktrace.log
 lib
+.classpath
+.settings
+.project
+_old
