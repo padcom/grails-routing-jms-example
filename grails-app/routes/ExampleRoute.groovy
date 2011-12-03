@@ -1,7 +1,8 @@
 class ExampleRoute {
+	def textProviderService
     def configure = {
         // example:
         // from('seda:input').to('stream:out')
-        from('activemq:example').to('bean:exampleService?method=receive')
+        from('activemq:example').processRef("myProcessor").to('bean:exampleService?method=receive')
     }
 }
