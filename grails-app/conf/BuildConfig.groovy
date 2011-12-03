@@ -25,9 +25,6 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-//        runtime ':routing:1.1.4-SNAPSHOT'
-//        runtime ':routing-jms:1.1.4-SNAPSHOT'
-        runtime ':hibernate:2.0.0.RC3'
         runtime ':tomcat:2.0.0.RC3'
     }
 
