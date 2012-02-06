@@ -42,12 +42,12 @@ grails.project.dependency.resolution = {
         compile ":resources:1.1.2"
 
         build ":tomcat:$grailsVersion"
+
     }
 }
 
-
 def setupPluginLocation(String plugin) {
-	[ "../../grails-${plugin}/workspace", "../grails-${plugin}"	].each { location ->
+	[ "../../grails-${plugin}/workspace", "../grails-${plugin}" ].each { location ->
 		if (new File(location).exists()) {
 			println "Using ${location} for ${plugin} plugin source"
 			grails.plugin.location."${plugin}" = location

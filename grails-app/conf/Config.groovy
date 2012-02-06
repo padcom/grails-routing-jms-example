@@ -91,3 +91,5 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+//grails.plugin.routing.jms.brokerURL = "tcp://localhost:61616"
